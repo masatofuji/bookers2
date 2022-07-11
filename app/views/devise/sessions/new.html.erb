@@ -4,6 +4,7 @@
     <div class="row">
       <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0">
         <h2>Log in</h2>
+        <%= form_with model: @user, url: user_session_path do |f| %>
         <form action="/users/sign_in" accept-charset="UTF-8" method="post">
           <input type="hidden" name="authenticity_token" value="mvMTCmmTcAzfXYwnaprcs1zDQVRkMCUwsdt3PEjyNZ811tnpmmgLUPjApNYPf1mnCU9JQO7lmYLMn0JFkuWGTw" autocomplete="off">
           <div class="field">
@@ -24,6 +25,7 @@
         </form>
         <a href="/users/sign_up">Sign up</a><br>
         <a href="/users/password/new">Forgot your password?</a><br>
+        <% end %>
       </div>
     </div>
   </div>

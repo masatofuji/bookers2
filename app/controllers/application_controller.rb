@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  protect_from_forgery
   before_action :authenticate_user!, except: [:top, :about]
 
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -11,9 +12,13 @@ class ApplicationController < ActionController::Base
     about_path
   end
 
+  def after_sign_up_path_for(resource)
+    books_path
+  end
+
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sigu_up, keys: [:email])
+    devise_parameter_sanitizer.permit(:sigu_up, keys: [:name])
   end
 end
