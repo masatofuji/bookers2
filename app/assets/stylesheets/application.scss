@@ -65,7 +65,7 @@ a {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
 }
-
+x
 .navbar {
     position: relative;
     padding: .5rem 1rem;
@@ -331,6 +331,12 @@ b, strong {
     border-color: #007bff;
 }
 
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
 .btn-group-sm>.btn, .btn-sm {
     padding: .25rem .5rem;
     font-size: .875rem;
@@ -355,11 +361,39 @@ b, strong {
     cursor: pointer;
 }
 
+.mt-3, .my-3 {
+    margin-top: 1rem!important;
+}
+
 .mt-5, .my-5 {
     margin-top: 3rem!important;
+}
+
+.form-group {
+    margin-bottom: 1rem;
 }
 
 label {
     display: inline-block;
     margin-bottom: .5rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+select.form-control[multiple], select.form-control[size], textarea.form-control {
+    height: auto;
 }
