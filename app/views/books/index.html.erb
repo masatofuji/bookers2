@@ -1,3 +1,5 @@
+books/index
+
 <div class="container px-5 px-sm-0">
   <div class="row">
     <%= render 'list', book: @book %>
@@ -19,9 +21,7 @@
             <tr>
               <td></td>
               <td>
-                <a href="/books/:id">
-                  <%= book.title %>
-                </a>
+                <%= link_to book.title, book_path(book.id) %>
               </td>
               <td>
                 <%= book.body %>

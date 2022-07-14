@@ -8,13 +8,15 @@
         <tr>
           <td></td>
           <td>
-            <a href="/books/:id">
-              <%= @book.title %>
-            </a>
+            <%= link_to @book.title %>
           </td>
           <td><%= @book.body %></td>
-          <% if @book.user == current_user %>
-            <%= link_to "Destroy", class:"btn btn-sm btn-danger", book_path(@book), method: :delete %>
+          <td></td>
+          <td>
+            <% if @book.user == current_user %>
+              <%= link_to "Destroy", book_path(@book), method: :delete, class:"btn btn-sm btn-danger" %>
+            <% end %>
+          </td>
         </tr>
       </table>
     </div>
