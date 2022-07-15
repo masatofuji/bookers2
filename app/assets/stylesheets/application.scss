@@ -115,6 +115,11 @@ button, input, optgroup, select, textarea {
     line-height: inherit;
 }
 
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
 button, input {
     overflow: visible;
 }
@@ -337,6 +342,12 @@ b, strong {
     border-color: #dc3545;
 }
 
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
 .btn-group-sm>.btn, .btn-sm {
     padding: .25rem .5rem;
     font-size: .875rem;
@@ -392,6 +403,11 @@ label {
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control-file, .form-control-range {
+    display: block;
+    width: 100%;
 }
 
 select.form-control[multiple], select.form-control[size], textarea.form-control {
